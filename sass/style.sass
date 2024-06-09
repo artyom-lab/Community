@@ -1,0 +1,979 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@400;500;700&display=swap')
+
+$transition: .3s
+
+$color-white: #FFF
+$color-black: #000
+$color-navbar: #f8f8f8
+$color-gray: #e1e1e1
+$color-red: #ff006c
+$color-green: #83d74b
+$color-darkgray: #646f77
+$color-body: #f0f1f4
+$color-footer: #222222
+
+*
+	outline: none !important
+
+img 
+	max-width: 100%
+	height: auto
+
+body 
+	font-family: 'Roboto', sans-serif
+	background-color: $color-white
+	display: flex
+	color: $color-black
+	flex-direction: column
+	min-height: 100vh
+	@media (max-width: 575.98px)
+		background: $color-body
+	&.menubar
+		overflow: hidden
+
+.gray
+	color: $color-darkgray
+
+a 
+	text-decoration: none !important
+	transition: $transition
+	color: $color-black
+	&:hover 
+		color: initial
+		opacity: .7
+
+.link-red
+	color: $color-red
+	font-weight: bold
+	&:hover 
+		color: $color-red
+
+.btn
+	&:focus
+		box-shadow: none
+
+@media (min-width: 1470px)
+	.container 
+		max-width: 1410px
+
+.row-6
+	margin-left: -6px
+	margin-right: -6px
+	> [class*='col']
+		padding-left: 6px
+		padding-right: 6px
+
+.row-8
+	margin-left: -8px
+	margin-right: -8px
+	> [class*='col']
+		padding-left: 8px
+		padding-right: 8px
+
+.row-20
+	@media (min-width: 1200px)
+		margin-left: -20px
+		margin-right: -20px
+		> [class*='col']
+			padding-left: 20px
+			padding-right: 20px
+
+.row-30
+	@media (min-width: 1200px)
+		margin-left: -30px
+		margin-right: -30px
+		> [class*='col']
+			padding-left: 30px
+			padding-right: 30px
+
+.form-group
+	margin-bottom: 16px
+
+.fz-12
+	font-size: 12px !important
+.fz-13
+	font-size: 13px !important
+.fz-14
+	font-size: 14px !important
+
+.h1, h1, .h2, h2, .h3, h3, .h4, h4, .h5, h5, .h6, h6
+	a 
+		color: $color-black
+
+.h1, h1
+	font-size: 27px
+	font-weight: bold
+	font-family: 'Merriweather', sans-serif
+	@media (max-width: 575.98px)
+		font-size: 20px
+
+.h2, h2
+	font-size: 19px
+	font-weight: bold
+
+.h3, h3
+	font-size: 33px
+	font-weight: bold
+	img 
+		width: 30px
+	@media (max-width: 575.98px)
+		font-size: 20px
+		img 
+			width: 20px
+
+.h4, h4
+	font-size: 14px
+	font-weight: bold
+	margin-bottom: 0
+
+.h5, h5
+	font-size: 16px
+	font-weight: bold
+
+.h6, h6
+	font-size: 13px
+	text-transform: uppercase
+
+.page-navbar
+	background: $color-navbar
+	font-size: 14px
+	top: -99px
+	transition: $transition
+	border-bottom: 2px solid $color-gray
+	z-index: 3002
+	.navbar
+		min-height: 60px
+		padding-top: 10px
+		padding-bottom: 10px
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1)
+		@media (max-width: 575.98px)
+			min-height: 50px
+			padding-top: 8px
+			padding-bottom: 8px
+		.img-header 
+			margin: 0 24px
+			padding: 4px 0
+			@media (max-width: 1199.98px)
+				margin: 0 auto
+			.logo
+				width: 250px
+				@media (max-width: 575.98px)
+					width: 230px
+		.navbar-collapse
+			@media (max-width: 1199.98px)
+				display: none
+			.navbar-nav
+				.nav-item
+					margin: 0 10px
+					.nav-link
+						padding: 4px
+						transition: $transition
+						color: $color-black
+						font-size: 14px
+						&:hover 
+							opacity: .7
+	&.fixed-top
+		position: fixed
+		transition: $transition
+		top: 0
+		margin-top: 0
+		transition: top .5s
+		.menu-box
+			width: 196px
+			@media (max-width: 1199.98px)
+				width: 91px
+			@media (max-width: 575.98px)
+				width: auto
+		.navbar-collapse
+			display: none !important
+		.select-language
+			display: none
+		.img-header 
+			margin: 0 auto
+
+.menu-box
+	display: flex
+	width: auto
+
+.sandwich
+	display: inline-block
+	cursor: pointer
+	transition: none
+	position: relative
+	vertical-align: middle
+	padding: 0
+	transition: $transition
+	border: 0
+	&:hover 
+		opacity: .7
+	&:before
+		width: 23px
+	span
+		width: 23px
+	&:after
+		width: 23px
+	&:before, &:after
+		content: ''
+	span, &:after
+		margin-top: 6px
+	span, &:before, &:after
+		display: block
+		transition: $transition
+		transform-origin: right center
+		border-top: 2px solid $color-black
+		margin-left: auto
+	.fa-search
+		display: inline-block
+		position: absolute
+		top: 50%
+		transition: $transition
+		right: -14px
+		transform: translateY(-50%)
+		color: $color-black
+		font-size: 16px
+		background: $color-navbar
+		border-radius: 100px
+		padding: 4px
+	&:hover
+		@media (max-width: 1199.98px)
+			opacity: 1
+	&.active
+		.fa-search
+			opacity: 0
+		&:before
+			transform: rotate(-45deg)
+			width: 23px
+		span
+			width: 0
+			opacity: 0
+		&:after
+			transform: rotate(45deg)
+			width: 23px
+
+.cloud
+	background-size: cover
+	background-position: center center
+	display: inline-block
+	width: 28px
+	height: 20px
+	vertical-align: middle
+
+.dots
+	font-size: 28px
+	line-height: 14px
+	vertical-align: middle
+
+.btn-navbar, .select-language
+	padding: 5px 12px
+	transition: $transition
+	display: inline-block
+	border-radius: 5px
+	min-width: 90px
+
+.btn-navbar
+	color: $color-white
+	background: $color-red
+	white-space: nowrap
+	border: 1px solid $color-red
+	font-size: 13px
+	text-align: center
+	&:hover 
+		opacity: .8
+		color: $color-white
+	&.btn-black
+		background: $color-black
+		border-color: $color-black
+
+.select-language
+	font-size: 13px
+	border: 1px solid $color-gray
+	cursor: pointer
+	width: auto
+	background: $color-white
+	&:hover 
+		opacity: .7
+	&:focus 
+		box-shadow: none
+		border-color: $color-gray
+
+.dropdown-more
+	.dropdown-toggle
+		&:after 
+			display: none
+	.dropdown-menu
+		margin-top: 0
+		transition: $transition
+		pointer-events: none
+		display: block
+		opacity: 0
+		position: absolute !important
+		top: 75% !important
+		&.show
+			opacity: 1
+			pointer-events: inherit
+			top: 100% !important
+		.dropdown-item
+			padding: 4px 16px
+			color: $color-black
+			font-size: 14px
+			&:hover, &:active, &:focus
+				background-color: transparent
+				opacity: .7
+
+#menu 
+	position: fixed
+	right: 0
+	left: 0
+	overflow: auto
+	z-index: 999
+	padding-bottom: 24px
+	transition: $transition
+	opacity: 0
+	background: $color-navbar
+	pointer-events: none
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1)
+	.menubar &
+		opacity: 1
+		pointer-events: auto
+	@media (max-width: 575.98px)
+		top: 50px
+		bottom: 0
+
+.form-box
+	padding: 14px 0
+	border-top: 1px solid $color-gray
+	border-bottom: 1px solid $color-gray
+
+.form
+	position: relative
+	.form-search
+		height: 40px
+		font-size: 16px
+		color: $color-black
+		font-weight: 500
+		padding-right: 40px
+		background: $color-white
+		border-color: $color-gray
+		border-radius: 5px
+		&::-webkit-input-placeholder
+			color: $color-gray
+		&::-moz-placeholder
+			color: $color-gray
+		&:-ms-input-placeholder
+			color: $color-gray
+		&:focus 
+			box-shadow: none
+	.fa-search
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: 14px
+		font-size: 20px
+		color: $color-black
+
+.link-title
+	color: $color-black
+	font-size: 18px
+	font-weight: bold
+	margin-bottom: 6px
+
+.links 
+	margin-bottom: 24px
+	a
+		color: $color-black
+		font-size: 14px
+		display: inline-block
+		padding-bottom: 8px
+		font-weight: 500
+		&:hover 
+			opacity: .7
+
+.nav-white
+	background: $color-white
+	border-bottom: 2px solid $color-gray
+	.nav-white-scroll
+		overflow-x: auto
+		padding: 5px 0
+		[class*='col']
+			position: initial
+			.dropdown
+				position: initial
+				.dropdown-toggle
+					&:after
+						display: none !important
+				.dropdown-menu
+					top: 5px !important
+					margin-top: 0
+					border-radius: 8px
+					font-size: 14px
+					padding: 12px
+					@media (max-width: 767.98px)
+						max-width: 300px
+					@media (min-width: 768px)
+						min-width: 265px
+					[class*='col']
+						&:first-child 
+							@media (min-width: 768px)
+								border-right: 1px solid $color-gray
+							@media (max-width: 767.98px)
+								border-bottom: 1px solid $color-gray
+								margin-bottom: 8px
+					.dropdown-item
+						padding: 8px 0
+						color: $color-black
+						font-weight: bold
+						white-space: wrap !important
+						&:hover, &:active, &:focus
+							background-color: transparent
+							opacity: .7
+						img
+							width: 13px
+							vertical-align: middle
+						span 
+							vertical-align: middle
+							margin-left: 4px
+	.nav-link
+		color: $color-black
+		padding: 6px 
+		font-size: 14px
+		transition: $transition
+		&:hover, &.active 
+			font-weight: bold
+			opacity: 1
+		img, span 
+			vertical-align: middle
+		img 
+			height: 23px
+
+.w-300 
+	@media (min-width: 1200px)
+		width: 300px
+
+.bg-img
+	background-size: cover
+	background-position: center center
+	height: auto
+
+.img-wrap 
+	overflow: hidden
+	transition: $transition
+	cursor: pointer
+	@media (max-width: 575.98px)
+		margin-left: -12px
+		margin-right: -12px
+	.bg-wrap
+		transition: $transition
+	@media (min-width: 1200px)
+		&:hover
+			.bg-wrap
+				transform: scale(1.1)
+
+.footer
+	margin-top: auto
+	background: $color-footer
+	color: $color-white
+	padding: 30px 0
+	font-family: 'Roboto', sans-serif
+	.title 
+		font-family: 'Merriweather', sans-serif
+		font-size: 21px
+		color: $color-white
+		font-weight: bold
+	.links-box
+		a 
+			color: $color-white
+			font-size: 14px
+
+.social-box	
+	.social
+		display: inline-block
+
+.copyright
+	font-size: 12px
+	text-align: center
+
+// CONTENT
+
+.section-upcoming
+	padding: 16px 0
+	background: $color-white
+	border-bottom: 2px solid $color-gray
+	font-size: 13px
+	line-height: 1.2
+
+// Center Column
+
+.content-box
+	@media (max-width: 575.98px)
+		background: $color-white
+		border-radius: 0 0 5px 5px
+		padding: 16px 15px 20px
+
+.rubric
+	text-transform: uppercase
+	font-size: 11px
+	font-weight: bold
+	color: $color-red
+	span 
+		color: $color-black
+		margin: 0 4px
+
+.comment 
+	font-size: 14px
+	color: #646f77
+	line-height: 1.2
+
+.section-center
+	.news 
+		display: block
+		padding-bottom: 32px
+		@media (min-width: 576px)
+			&:not(:first-child)
+				padding-top: 32px
+			&:not(:last-child)
+				border-bottom: 2px solid $color-gray
+		@media (min-width: 1200px)
+			padding-left: 30px
+			padding-right: 30px
+	&.section-center-2
+		.news 
+			@media (min-width: 1200px)
+				padding-left: 0
+				padding-right: 0
+
+.vertical-line
+	@media (min-width: 1200px)
+		border-right: 2px solid $color-gray
+
+.submit-box
+	background: $color-navbar
+	padding: 30px
+	margin-bottom: 32px
+	@media (max-width: 575.98px)
+		padding: 20px 16px
+		background: $color-white
+		border-radius: 5px
+	@media (min-width: 1200px)
+		border-top: 2px solid $color-gray
+		border-bottom: 2px solid $color-gray
+	&.submit-box-2
+		border-radius: 5px
+		border: 0
+	.subheading
+		font-size: 23px
+		font-weight: bold
+		font-family: 'Merriweather', sans-serif
+		margin-bottom: 4px
+	.form-control
+		border-radius: 5px
+		font-size: 13px
+		height: 38px
+		color: $color-black
+		border-color: $color-gray
+		&::-webkit-input-placeholder
+			color: $color-black
+		&::-moz-placeholder
+			color: $color-black
+		&:-ms-input-placeholder
+			color: $color-black
+		&:focus 
+			box-shadow: none
+	.small
+		font-size: 10px
+		line-height: 1.2
+
+.btn-submit
+	background: $color-red
+	color: $color-white
+	font-weight: bold 
+	font-size: 14px
+	padding: 6px 44px
+	transition: $transition
+	&:hover, &:active
+		color: $color-white !important
+		background: $color-red !important
+		opacity: .8
+
+.schedule-box
+	background: $color-navbar
+	padding: 24px 30px
+	margin-bottom: 32px
+	&.box-white
+		background: $color-white
+		border: 0
+	@media (max-width: 575.98px)
+		padding: 20px 16px
+		background: $color-white
+		text-align: center
+		border-radius: 5px
+	@media (min-width: 1200px)
+		border-top: 2px solid $color-gray
+		border-bottom: 2px solid $color-gray
+	.title
+		font-size: 18px
+		font-weight: bold
+
+.select-schedule
+	font-size: 14px
+	border: 1px solid $color-gray
+	cursor: pointer
+	padding: 6px 28px 6px 14px
+	background: $color-white url(../img/arrows.webp) no-repeat right 0.75rem center/8px 12px
+	&:focus 
+		box-shadow: none
+		border-color: $color-gray
+
+.schedule
+	.box
+		padding: 14px 0
+		border-bottom: 2px solid $color-gray
+		&:last-child
+			border-bottom: 0
+		.team-name
+			font-size: 14px
+			margin-left: 4px
+			@media (max-width: 575.98px)
+				display: none
+		.day, .time
+			font-size: 13px
+			color: #646f77
+		.time 
+			display: inline-block
+			width: 64px
+		.team 
+			img 
+				width: 20px
+
+.result
+	font-weight: bold 
+
+.win 
+	color: $color-green
+	font-weight: bold
+.lose 
+	color: $color-red
+	font-weight: bold
+
+// Right Column
+
+.section-news
+	@media (max-width: 575.98px)
+		background: $color-white
+		border-radius: 5px
+		padding: 20px 16px
+	.block-news
+		padding: 16px 0
+		&:not(:last-child)
+			border-bottom: 2px solid $color-gray
+		&.block-small
+			padding: 10px 0
+		.number
+			font-size: 14px
+			color: $color-red
+			font-weight: bold
+			line-height: 1.2
+		.img-team
+			width: 30px
+		.img-sports
+			width: 22px
+		.player 
+			font-size: 14px
+
+.section-opinions
+	h4 
+		font-family: 'Merriweather', sans-serif
+		font-size: 12px
+		line-height: 1.5
+
+.podcast-box
+	font-size: 14px
+	color: $color-darkgray
+	img, span 
+		vertical-align: middle
+
+// Left Column
+
+.section-scroll
+	@media (min-width: 576px)
+		padding-bottom: 16px
+	.news 
+		display: block
+		padding-bottom: 18px
+		&:not(:first-child)
+			padding-top: 18px
+		&:not(:last-child)
+			border-bottom: 2px solid $color-gray
+	.scroll
+		max-height: 500px
+		overflow: auto
+		padding-right: 12px
+		&::-webkit-scrollbar
+			width: 4px
+			height: 5px
+		&::-webkit-scrollbar-track
+			background-color: transparent
+			border-radius: 4px
+		&::-webkit-scrollbar-thumb
+			background-color: $color-gray
+			border-radius: 4px
+
+// TEAMS
+
+.date 
+	color: $color-darkgray
+	font-size: 14px
+
+.vs 
+	font-size: 14px
+
+.header-team
+	background: $color-white
+	border-bottom: 2px solid $color-gray
+	padding: 16px 
+	.logo
+		width: 44px
+	.title 
+		font-size: 26px
+		font-weight: bold 
+		line-height: 1.2
+	@media (max-width: 575.98px)
+		padding: 10px 0
+		.title 
+			font-size: 20px
+		.logo
+			width: 36px
+
+.bl-gray
+	@media (min-width: 768px)
+		border-left: 2px solid $color-gray
+
+.scroll
+	&::-webkit-scrollbar
+		width: 4px
+		height: 4px
+	&::-webkit-scrollbar-track
+		background-color: transparent
+		border-radius: 2px
+	&::-webkit-scrollbar-thumb
+		background-color: $color-gray
+		border-radius: 2px
+
+.table-team
+	margin-bottom: 0 !important
+	font-size: 14px
+	cursor: pointer
+	tbody
+		th, td
+			text-align: center
+			white-space: nowrap
+			padding: 8px 20px
+
+.img-team-table, .img-player-table
+	margin: 0 4px
+	display: inline-flex
+	vertical-align: middle
+	text-align: center
+	img 
+		margin: auto
+		max-height: 100%
+
+.img-team-table
+	width: 30px
+	height: 30px
+
+.img-player-table
+	width: 40px
+	height: 40px
+
+// SCHOOL
+
+.tabs-search
+	font-size: 14px
+	border: 0
+	.nav-link
+		border: 1px solid $color-gray
+		background: $color-navbar
+		color: $color-black
+		text-align: center
+		transition: $transition
+		border-radius: 5px
+		padding: 4px 
+		&.active, &:hover
+			background: $color-red
+			opacity: 1
+			color: $color-white
+			border-color: $color-red
+
+// SCHEDULE
+
+.table-schedule
+	min-width: 650px
+	margin-bottom: 0 !important
+	text-align: left
+	thead
+		th
+			font-size: 14px
+			padding: 4px 10px
+	tbody
+		font-size: 14px
+		tr
+			&:not(:last-child)
+				border-bottom: 1px solid $color-gray
+		th, td
+			padding: 10px
+			vertical-align: middle
+	.team 
+		vertical-align: middle 
+		font-weight: bold
+
+// STORY
+
+.local-box
+	line-height: 1.2
+	.title
+		font-weight: bold 
+		font-size: 35px
+		margin-bottom: 8px
+		@media (max-width: 575.98px)
+			font-size: 28px
+	.subheading 
+		color: $color-darkgray
+		font-size: 19px
+
+// EVENTS 
+
+.events-calendar
+	padding: 30px 0
+	background: $color-white
+	border-bottom: 2px solid $color-gray
+
+.section-event
+	@media (max-width: 575.98px) 
+		background: $color-white
+		border-radius: 5px
+		padding: 20px 16px
+	.event-row
+		&:not(:last-child)
+			border-bottom: 2px solid $color-gray
+			margin-bottom: 20px
+		.event
+			padding-bottom: 20px
+			.content
+				font-size: 13px
+				@media (min-width: 768px) 
+					padding-top: 20px
+			.img-wrap 
+				@media (max-width: 575.98px)
+					margin: 0
+		@media (max-width: 767.98px) 
+			.row
+				> [class*='col']
+					&:not(:last-child)
+						.event
+							margin-bottom: 20px
+							border-bottom: 2px solid $color-gray
+
+.select-events, .input-dates
+	border: 1px solid $color-gray
+	transition: $transition
+	font-weight: bold
+	border-radius: 5px
+	min-width: 150px
+	cursor: pointer
+	&:hover 
+		opacity: .7
+	&:focus 
+		box-shadow: none
+		border-color: $color-gray
+
+.select-events
+	padding: 8px 24px 8px 12px
+	display: inline-block
+	font-size: 13px
+	width: auto
+	background: $color-white url(../img/arrows.webp) no-repeat right 0.75rem center/8px 12px
+	@media (max-width: 575.98px)
+		min-width: auto
+		width: 100%
+
+.input-dates
+	font-size: 12px
+	height: 37.5px
+
+// STORY 
+
+.social-story
+	a 
+		display: inline-block
+		img 
+			width: 25px
+			height: 25px
+
+.story-content
+	font-family: 'Merriweather', sans-serif
+	p 
+		margin-bottom: 24px
+		@media (max-width: 767.98px)
+			font-size: 14px
+
+.r-5
+	@media (max-width: 575.98px)
+		border-radius: 5px
+
+.org-box
+	@media (min-width: 576px)
+		border-top: 2px solid $color-gray
+		border-bottom: 2px solid $color-gray
+		padding: 30px 0
+
+.a-red
+	font-size: 15px
+	font-weight: bold 
+	color: $color-red
+	vertical-align: middle
+	&:hover 
+		color: $color-red
+
+.dot 
+	font-size: 34px
+	vertical-align: middle
+	line-height: 1
+
+.quotes-section
+	max-width: 40%
+	background: $color-navbar
+	border-radius: 5px
+	padding: 15px 30px
+	position: relative
+	float: left
+	font-weight: bold
+	margin-bottom: 16px
+	margin-right: 30px
+	font-size: 18px
+	margin-left: -120px
+	@media (max-width: 991.98px)
+		margin-left: 0
+		margin-right: 16px
+		font-size: 16px	
+	@media (max-width: 575.98px)
+		max-width: 100%
+		margin-right: 0
+
+.table-box
+	border-radius: 5px 
+	background: $color-navbar
+	padding: 25px 30px
+	border: 1px solid $color-gray 
+	@media (max-width: 575.98px)
+		background: $color-white
+	.table-small
+		min-width: auto
+		thead, tbody 
+			tr 
+				td, th 
+					&:last-child 
+						text-align: center
+	.table
+		--bs-table-bg: $color-navbar
+
+

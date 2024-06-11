@@ -128,7 +128,7 @@ a {
   font-size: 14px;
   top: -99px;
   transition: 0.3s;
-  border-bottom: 2px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
   z-index: 3002; }
   .page-navbar .navbar {
     min-height: 60px;
@@ -381,7 +381,7 @@ a {
 
 .nav-white {
   background: #FFF;
-  border-bottom: 2px solid #e1e1e1; }
+  border-bottom: 1px solid #e1e1e1; }
   .nav-white .nav-white-scroll {
     overflow-x: auto;
     padding: 5px 0; }
@@ -485,7 +485,7 @@ a {
 .section-upcoming {
   padding: 16px 0;
   background: #FFF;
-  border-bottom: 2px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
   font-size: 13px;
   line-height: 1.2; }
 
@@ -516,7 +516,7 @@ a {
     .section-center .news:not(:first-child) {
       padding-top: 32px; }
     .section-center .news:not(:last-child) {
-      border-bottom: 2px solid #e1e1e1; } }
+      border-bottom: 1px solid #e1e1e1; } }
   @media (min-width: 1200px) {
     .section-center .news {
       padding-left: 30px;
@@ -528,7 +528,7 @@ a {
 
 @media (min-width: 1200px) {
   .vertical-line {
-    border-right: 2px solid #e1e1e1; } }
+    border-right: 1px solid #e1e1e1; } }
 
 .submit-box {
   background: #f8f8f8;
@@ -541,8 +541,8 @@ a {
       border-radius: 5px; } }
   @media (min-width: 1200px) {
     .submit-box {
-      border-top: 2px solid #e1e1e1;
-      border-bottom: 2px solid #e1e1e1; } }
+      border-top: 1px solid #e1e1e1;
+      border-bottom: 1px solid #e1e1e1; } }
   .submit-box.submit-box-2 {
     border-radius: 5px;
     border: 0; }
@@ -596,8 +596,8 @@ a {
       border-radius: 5px; } }
   @media (min-width: 1200px) {
     .schedule-box {
-      border-top: 2px solid #e1e1e1;
-      border-bottom: 2px solid #e1e1e1; } }
+      border-top: 1px solid #e1e1e1;
+      border-bottom: 1px solid #e1e1e1; } }
   .schedule-box .title {
     font-size: 18px;
     font-weight: bold; }
@@ -614,7 +614,7 @@ a {
 
 .schedule .box {
   padding: 14px 0;
-  border-bottom: 2px solid #e1e1e1; }
+  border-bottom: 1px solid #e1e1e1; }
   .schedule .box:last-child {
     border-bottom: 0; }
   .schedule .box .team-name {
@@ -651,7 +651,7 @@ a {
 .section-news .block-news {
   padding: 16px 0; }
   .section-news .block-news:not(:last-child) {
-    border-bottom: 2px solid #e1e1e1; }
+    border-bottom: 1px solid #e1e1e1; }
   .section-news .block-news.block-small {
     padding: 10px 0; }
   .section-news .block-news .number {
@@ -686,7 +686,7 @@ a {
   .section-scroll .news:not(:first-child) {
     padding-top: 18px; }
   .section-scroll .news:not(:last-child) {
-    border-bottom: 2px solid #e1e1e1; }
+    border-bottom: 1px solid #e1e1e1; }
 .section-scroll .scroll {
   max-height: 500px;
   overflow: auto;
@@ -710,7 +710,7 @@ a {
 
 .header-team {
   background: #FFF;
-  border-bottom: 2px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
   padding: 16px; }
   .header-team .logo {
     width: 44px; }
@@ -728,7 +728,7 @@ a {
 
 @media (min-width: 768px) {
   .bl-gray {
-    border-left: 2px solid #e1e1e1; } }
+    border-left: 1px solid #e1e1e1; } }
 
 .scroll::-webkit-scrollbar {
   width: 4px;
@@ -817,7 +817,7 @@ a {
 .events-calendar {
   padding: 30px 0;
   background: #FFF;
-  border-bottom: 2px solid #e1e1e1; }
+  border-bottom: 1px solid #e1e1e1; }
 
 @media (max-width: 575.98px) {
   .section-event {
@@ -825,7 +825,7 @@ a {
     border-radius: 5px;
     padding: 20px 16px; } }
 .section-event .event-row:not(:last-child) {
-  border-bottom: 2px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
   margin-bottom: 20px; }
 .section-event .event-row .event {
   padding-bottom: 20px; }
@@ -840,7 +840,7 @@ a {
 @media (max-width: 767.98px) {
   .section-event .event-row .row > [class*='col']:not(:last-child) .event {
     margin-bottom: 20px;
-    border-bottom: 2px solid #e1e1e1; } }
+    border-bottom: 1px solid #e1e1e1; } }
 
 .select-events, .input-dates {
   border: 1px solid #e1e1e1;
@@ -890,8 +890,8 @@ a {
 
 @media (min-width: 576px) {
   .org-box {
-    border-top: 2px solid #e1e1e1;
-    border-bottom: 2px solid #e1e1e1;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
     padding: 30px 0; } }
 
 .a-red {

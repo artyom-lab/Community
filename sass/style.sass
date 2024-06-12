@@ -138,14 +138,14 @@ a
 	background: $color-navbar
 	font-size: 14px
 	top: -99px
-	transition: $transition
+	transition: 2s
 	border-bottom: 1px solid $color-gray
 	z-index: 3002
 	.navbar
 		min-height: 60px
 		padding-top: 10px
 		padding-bottom: 10px
-		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1)
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2)
 		@media (max-width: 575.98px)
 			min-height: 50px
 			padding-top: 8px
@@ -153,6 +153,7 @@ a
 		.img-header 
 			margin: 0 24px
 			padding: 4px 0
+			transition: $transition
 			@media (max-width: 1199.98px)
 				margin: 0 auto
 			.logo
@@ -181,8 +182,6 @@ a
 		.menu-box
 			width: 196px
 			@media (max-width: 1199.98px)
-				width: 91px
-			@media (max-width: 575.98px)
 				width: auto
 		.navbar-collapse
 			display: none !important
@@ -190,6 +189,11 @@ a
 			display: none
 		.img-header 
 			margin: 0 auto
+		.header-team 
+			display: none
+		.nav-white 
+			.col-team
+				display: block
 
 .menu-box
 	display: flex
@@ -390,7 +394,6 @@ a
 
 .nav-white
 	background: $color-white
-	border-bottom: 1px solid $color-gray
 	.nav-white-scroll
 		overflow-x: auto
 		padding: 5px 0
@@ -443,7 +446,11 @@ a
 		img, span 
 			vertical-align: middle
 		img 
-			height: 23px
+			height: 26px
+
+.col-team
+	border-right: 1px solid $color-gray
+	display: none
 
 .w-300 
 	@media (min-width: 1200px)

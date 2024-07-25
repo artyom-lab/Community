@@ -33,4 +33,28 @@ $(document).ready(function () {
 
 	cb(start, end);
 
+  $('.owl-1').owlCarousel({
+  	responsive: {
+  		0: {
+  			items: 4,
+  		},
+  		576: {
+  			items: 7,
+  		},
+  		768: {
+  			items: 10,
+  		},
+  		992: {
+  			items: 12,
+  		},
+  		1400: {
+  			items: 15,
+  		},
+  	},
+	  smartSpeed: 400,
+	  nav: true,
+	  dots: false,
+	  navText: ['','']
+  });
+
 });
